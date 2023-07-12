@@ -16,12 +16,55 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
+@keyframes oscillate {
+  from {
+    transform: translateY(4px);
+  }
+  to {
+    transform: translateY(-4px);
+  }
+}
+
+.flag {
+  display: flex;
+  aspect-ratio: 3 / 2;
+}
+
+.column {
+  flex: 1;
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+          to bottom,
+          #ff218c 0%,
+          #ff218c 33%,
+          #ffdc00 33%,
+          #ffdc00 66%,
+          #ffdc00 66%,
+          #1fb2ff 66%,
+          #1fb2ff 100%
+  );
+
+  animation: oscillate 650ms infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+.light-mode {
+    background-color: white;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.dark-mode {
+    background-color: #1f2937;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.light-mode-content {
+    background: linear-gradient(to bottom right, #3b82f6, #9333ea);
+    transition: background 0.5s ease-in-out;
+}
+
+.dark-mode-content {
+    background-color: #1f2937;
+    transition: background-color 0.5s ease-in-out;
 }
