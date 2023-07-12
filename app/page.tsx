@@ -29,7 +29,7 @@ export default function Home() {
                         </svg>
                     )}
                 </div>
-                <div className={`${lightMode ? 'text-white' : 'text-gray-200 opacity-75 '} flex text-center items-center gap-4`}>
+                <div className={`${lightMode ? 'text-white' : 'text-gray-200 opacity-75 '} flex text-center items-center gap-4`} onClick={() => window.location.href = 'https://github.com/MarquesCoding/mscripps.com'}>
                     <div>
                         Powered by <span>Next.js</span>, <span>TailwindCSS</span>, <span>Vercel</span> and <span>Three.js</span>
                     </div>
@@ -42,8 +42,8 @@ export default function Home() {
                     <div className="text-white text-sm font-medium border px-3 py-1 rounded-md text-center border-white/20 hover:bg-white/20 duration-300 w-fit mb-8 fade-in-animation-delay-75">
                         (っ◔◡◔)っ · Hannah · 12/02/22
                     </div>
-                    <p className="text-white text-7xl fade-in-animation-delay-20 font-semibold text-center">Marques Scripps</p>
-                    <p className="text-gray-100 text-xl fade-in-animation-delay-20 text-center">Software Engineer from the UK</p>
+                    <p className="text-white text-7xl font-semibold text-center">Marques Scripps</p>
+                    <p className="text-gray-100 text-xl  text-center">Software Engineer from the UK</p>
                     <p className="text-white opacity-50">Where I've worked</p>
                     <div className="flex flex-row gap-2">
                         <div>
