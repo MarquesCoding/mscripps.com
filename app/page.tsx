@@ -1,10 +1,14 @@
 'use client'
 
-import React from "react";
+import React, {useEffect} from "react";
 import Space from "@/app/components/Space";
 
 export default function Home() {
-    const [lightMode, setLightMode] = React.useState(localStorage.getItem('lightMode') === 'true');
+    const [lightMode, setLightMode] = React.useState(false);
+
+    useEffect(() => {
+        setLightMode(localStorage.getItem('lightMode') === 'true');
+    }, [])
 
     const toggleLightMode = () => {
         const updatedMode = !lightMode;
